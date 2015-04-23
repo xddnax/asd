@@ -87,7 +87,7 @@ public class DBManipulator {
             while (rs.next()){
                 columnData = new ArrayList<String>();
                 for (int i = 1; i<=colNum; i++){
-                    columnData.add(rsmd.getColumnName(i));
+                    columnData.add(rs.getString(i));
                 }
                 dbTable.addRecord(new DBRecord(columnData, "1"));
             }
