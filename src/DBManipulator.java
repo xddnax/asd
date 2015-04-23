@@ -72,10 +72,9 @@ public class DBManipulator {
         ArrayList<String> columnNames = new ArrayList<String>();
         ArrayList<String> columnData = new ArrayList<String>();
 
-        SQL = "Select * from ?";
+        SQL = "Select * from " + table;
         try {
             pstmt = con.prepareStatement(SQL);
-            pstmt.setString(1, table);
             rs = pstmt.executeQuery();
             rsmd = rs.getMetaData();
 
