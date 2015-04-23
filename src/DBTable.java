@@ -9,12 +9,7 @@ public class DBTable {
         super();
         this.tableName = tableName;
         this.columns = columns;
-    }
-
-    public DBTable(ArrayList<String> columns, ArrayList<DBRecord> data) {
-        super();
-        this.columns = columns;
-        this.data = data;
+        this.data = new ArrayList<DBRecord>();
     }
 
     public ArrayList<String> getColumns() {
