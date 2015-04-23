@@ -55,7 +55,7 @@ public class DBManipulator {
             pstmt = con.prepareStatement("Show tables");
             rs = pstmt.executeQuery();
             while (rs.next()){
-                this.tables.add(rs.getString(0));
+                this.tables.add(rs.getString(1));
             }
         } catch (SQLException e) {
             e.printStackTrace();
