@@ -1,19 +1,19 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 
 public class Queries {
-	private Connection con;
+    private ArrayList<String> tables;
+    private Connection con;
 	
 	public Queries(){
 		super();
-	}
+	    this.openDBconn();
+        this.fetchTables();
+    }
 	
-	public void openDBconn(){
+	private void openDBconn(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			String temp = "jdbc:sqlserver://tg33.mysql.cs.st-andrews.ac.uk:3306/tg33_db?user=tg33&password=cyQaQ3x.";
@@ -45,4 +45,24 @@ public class Queries {
 		}
 		return select;
 	}
+
+    private void fetchTables(){
+        this.tables = new ArrayList<String>();
+        String SQL = "Show tables";
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try {
+            pstmt = con.prepareStatement("Show tables");
+            rs = pstmt.executeQuery();
+            while (rs.next()){
+                this.tables.add(rs.getString(0));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public ArrayList<String> getTables() {
+        return tables;
+    }
 }
