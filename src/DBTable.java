@@ -31,4 +31,8 @@ public class DBTable {
     public void addRecord(DBRecord dbr){
         this.data.add(dbr);
     }
+    
+    public String getTableName() {
+        return tableName;
+    }
 }
