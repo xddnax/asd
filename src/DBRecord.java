@@ -24,4 +24,12 @@ public class DBRecord {
     public void setKey(String key) {
         this.key = key;
     }
+
+    public String toString(){
+        String s = "";
+        for (String val: columnValues){
+            s += val + "\t";
+        }
+        return s;
+    }
 }

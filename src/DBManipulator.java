@@ -70,7 +70,7 @@ public class DBManipulator {
 
     public void chooseTable(String table){
         ArrayList<String> columnNames = new ArrayList<String>();
-        ArrayList<String> columnData = new ArrayList<String>();
+        ArrayList<String> columnData;
 
         SQL = "Select * from " + table;
         try {
@@ -83,13 +83,13 @@ public class DBManipulator {
             for (int i = 1; i<=colNum; i++){
                 columnNames.add(rsmd.getColumnName(i));
             }
-            dbTable = new DBTable(table, columnNames);
+            this.dbTable = new DBTable(table, columnNames);
             while (rs.next()){
                 columnData = new ArrayList<String>();
                 for (int i = 1; i<=colNum; i++){
                     columnData.add(rs.getString(i));
                 }
-                dbTable.addRecord(new DBRecord(columnData, "1"));
+                this.dbTable.addRecord(new DBRecord(columnData, "1"));
             }
         } catch (SQLException e) {
             System.err.println("Error in choosing table: " + table);
