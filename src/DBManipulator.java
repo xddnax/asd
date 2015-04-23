@@ -14,11 +14,11 @@ public class DBManipulator {
 
 	public DBManipulator(){
 		super();
-	    this.openDBconn();
+	    this.openDBCon();
         this.fetchTables();
     }
 	
-	private void openDBconn(){
+	private void openDBCon(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			String temp = "jdbc:sqlserver://tg33.mysql.cs.st-andrews.ac.uk:3306/tg33_db?user=tg33&password=cyQaQ3x.";
@@ -104,5 +104,74 @@ public class DBManipulator {
 
     public DBTable getDbTable() {
         return dbTable;
+    }
+    
+    public void deleteRow(){
+        SQL = "delete * from " + dbTable.getTableName() + " where ? = ?";
+        try {
+            pstmt = con.prepareStatement(SQL);
+            rs = pstmt.executeQuery();
+
+        } catch (SQLException e) {
+            System.err.println("Error in deleting row " + dbTable.getTableName());
+            System.err.println("SQL: " + SQL);
+            e.printStackTrace();
+        }
+    }
+
+    public void insertRow(ArrayList<String> values){
+        StringBuilder sb = new StringBuilder();
+        sb.append("insert into " + dbTable.getTableName());
+        sb.append("( ");
+        for (int i = 0; i < dbTable.getColumns().size(); i++){
+            if (i == dbTable.getColumns().size()-1){
+                sb.append(dbTable.getColumns().get(i) + ", ");
+            } else {
+                sb.append(dbTable.getColumns().get(i) + " ) ");
+            }
+        }
+        sb.append(" values ( ");
+        for (int i = 0; i < values.size(); i++){
+            if (i == values.size()-1){
+                sb.append(values.get(i) + ", ");
+            } else {
+                sb.append(values.get(i) + " ) ");
+            }
+        }
+        SQL += sb.toString();
+        try {
+            pstmt = con.prepareStatement(SQL);
+            rs = pstmt.executeQuery();
+        } catch (SQLException e) {
+            System.err.println("Error in inserting row " + dbTable.getTableName());
+            System.err.println("SQL: " + SQL);
+            e.printStackTrace();
+        }
+    }
+
+    public void filterResults(){
+        SQL = "delete * from " + dbTable.getTableName() + " where ? = ?";
+        try {
+            pstmt = con.prepareStatement(SQL);
+            rs = pstmt.executeQuery();
+
+        } catch (SQLException e) {
+            System.err.println("Error in deleting row " + dbTable.getTableName());
+            System.err.println("SQL: " + SQL);
+            e.printStackTrace();
+        }
+    }
+
+    public void updateRow(){
+        SQL = "delete * from " + dbTable.getTableName() + " where ? = ?";
+        try {
+            pstmt = con.prepareStatement(SQL);
+            rs = pstmt.executeQuery();
+
+        } catch (SQLException e) {
+            System.err.println("Error in deleting row " + dbTable.getTableName());
+            System.err.println("SQL: " + SQL);
+            e.printStackTrace();
+        }
     }
 }
