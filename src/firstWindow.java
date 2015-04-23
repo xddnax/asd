@@ -13,13 +13,16 @@ public class firstWindow extends JFrame{
 	public  JFrame getGUI(){
 		int numOfTables = tableNames.size();
 		JFrame frame = new JFrame();
-		Dimension d = new Dimension(150*numOfTables,100);
+		Dimension d = new Dimension(150*numOfTables + 100,100);
 		frame.setPreferredSize(d);
+		frame.setSize(d);
 		for(int i=0;i<numOfTables;i++){
-			JButton button = new JButton();
-			button.setPreferredSize(new Dimension(150,50));
-			button.setBounds(150*i, 50, 150, 50);
+			JButton button = new JButton(tableNames.get(i));
+			button.setBounds(50+150*i, 25, 150, 50);
+		//	button.setPreferredSize(new Dimension(150,50));
+		
 			frame.add(button);
+			
 		}
 		frame.setVisible(true);
 	return frame;}
