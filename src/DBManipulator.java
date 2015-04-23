@@ -119,7 +119,7 @@ public class DBManipulator {
         }
     }
 
-    public void insertRow(ArrayList<String> values){
+    public String insertRow(ArrayList<String> values){
         StringBuilder sb = new StringBuilder();
         sb.append("insert into " + dbTable.getTableName());
         sb.append("( ");
@@ -138,7 +138,7 @@ public class DBManipulator {
                 sb.append(values.get(i) + " ) ");
             }
         }
-        SQL += sb.toString();
+        SQL = sb.toString();
         try {
             pstmt = con.prepareStatement(SQL);
             rs = pstmt.executeQuery();
@@ -147,6 +147,7 @@ public class DBManipulator {
             System.err.println("SQL: " + SQL);
             e.printStackTrace();
         }
+        return "yes";
     }
 
     public void filterResults(){
