@@ -80,7 +80,7 @@ public class FirstWindow extends JFrame implements ActionListener{
     ArrayList<String> tableNames = new ArrayList<String>();
     JPanel panel;
     JPanel panel2;
-    
+    String buttonName="";
     public FirstWindow(){
         super("Add component on DBManipulator at runtime");
         tableNames= dbm.getTables();
@@ -104,7 +104,7 @@ public class FirstWindow extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent evt) {
         for(int i=0;i<tableNames.size();i++){
         	JButton button = new JButton(tableNames.get(i));
-        	button.setName(tableNames.get(i));
+        	buttonName = tableNames.get(i);
         	panel.add(button);
             button.addActionListener(new ActionListener(){
             	public void actionPerformed(ActionEvent e){
@@ -114,7 +114,7 @@ public class FirstWindow extends JFrame implements ActionListener{
             		panel2.setVisible(true);
             		 System.setOut(new PrintStream(new ConsoleX(ta)));
             	        ta.setLineWrap(false);
-            	       dbm.chooseTable(button.getName());
+            	       dbm.chooseTable(buttonName);
             	        System.out.println(dbm.getDbTable().getColumns().get(0));
             	}
             });
@@ -126,6 +126,7 @@ public class FirstWindow extends JFrame implements ActionListener{
     public void selectedTable(ActionEvent evt){
     	
     }
+    
     public static void main(String[] args) {
         FirstWindow fw = new FirstWindow();
 
