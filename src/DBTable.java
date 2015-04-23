@@ -1,5 +1,39 @@
-/**
- * Created by btsyrenov on 23/04/15.
- */
+import java.util.ArrayList;
+
 public class DBTable {
+    private String tableName;
+    private ArrayList<String> columns;
+    private ArrayList<DBRecord> data;
+
+    public DBTable(String tableName, ArrayList<String> columns) {
+        super();
+        this.tableName = tableName;
+        this.columns = columns;
+    }
+
+    public DBTable(ArrayList<String> columns, ArrayList<DBRecord> data) {
+        super();
+        this.columns = columns;
+        this.data = data;
+    }
+
+    public ArrayList<String> getColumns() {
+        return columns;
+    }
+
+    public void setColumns(ArrayList<String> columns) {
+        this.columns = columns;
+    }
+
+    public ArrayList<DBRecord> getData() {
+        return data;
+    }
+
+    public void setData(ArrayList<DBRecord> data) {
+        this.data = data;
+    }
+
+    public void addRecord(DBRecord dbr){
+        this.data.add(dbr);
+    }
 }
