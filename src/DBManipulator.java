@@ -3,11 +3,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-public class Queries {
+public class DBManipulator {
     private ArrayList<String> tables;
     private Connection con;
 	
-	public Queries(){
+	public DBManipulator(){
 		super();
 	    this.openDBconn();
         this.fetchTables();
