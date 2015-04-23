@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -22,6 +23,7 @@ public class FirstWindow extends JFrame implements ActionListener{
         JButton button = new JButton("Get tables");
         add(button, BorderLayout.SOUTH);
         button.addActionListener(this);
+       
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 500);
         setVisible(true);
@@ -33,6 +35,14 @@ public class FirstWindow extends JFrame implements ActionListener{
             panel.revalidate();
             validate();
         }
+//        JPanel panel2 = new JPanel();
+//        JTextArea ta = new JTextArea();
+//        JButton selectButton = new JButton("select smth");
+//        JTextField textInput1 = new JTextField("enter what to select here");
+//        panel2.add(ta);
+//        panel2.add(selectButton);
+//        panel2.add(textInput1);
+//        panel2.setVisible(true);
 
     }
     public static void main(String[] args) {
