@@ -27,36 +27,36 @@ public class Test {
         vals.add("asd");
         vals.add("M");
 
-        qs.deleteRow(vals);
+//        qs.deleteRow(vals);
 
-//        DatabaseMetaData dmd = qs.getDmd();
-//        ResultSet rs = dmd.getPrimaryKeys(null, null, "Artist");
-//        ResultSetMetaData rsmd = rs.getMetaData();
-//        while(rs.next()){
-//            for (int i = 1; i <= rsmd.getColumnCount(); i++){
-//                System.out.print(rs.getString(i) + " ");
-//            }
-//            System.out.println();
-//        }
-//
-//        rs = dmd.getPrimaryKeys(null, null, "Album");
-//        rsmd = rs.getMetaData();
-//        while(rs.next()){
-//            for (int i = 1; i <= rsmd.getColumnCount(); i++){
-//                System.out.print(rs.getString(i) + " ");
-//            }
-//            System.out.println();
-//        }
-//
-//
-//        rs = dmd.getPrimaryKeys(null, null, "Record");
-//        rsmd = rs.getMetaData();
-//        while(rs.next()){
-//            for (int i = 1; i <= rsmd.getColumnCount(); i++){
-//                System.out.print(rs.getString(i) + " ");
-//            }
-//            System.out.println();
-//        }
+        DatabaseMetaData dmd = qs.getDmd();
+        ResultSet rs = dmd.getPrimaryKeys(null, null, "Storage_Box");
+        ResultSetMetaData rsmd = rs.getMetaData();
+        while(rs.next()){
+            for (int i = 1; i <= rsmd.getColumnCount(); i++){
+                System.out.print(rs.getString(i) + " ");
+            }
+            System.out.println();
+        }
+
+        rs = dmd.getPrimaryKeys(null, null, "Album");
+        rsmd = rs.getMetaData();
+        while(rs.next()){
+            for (int i = 1; i <= rsmd.getColumnCount(); i++){
+                System.out.print(rs.getString(i) + " ");
+            }
+            System.out.println();
+        }
+
+
+        rs = dmd.getPrimaryKeys(null, null, "Record");
+        rsmd = rs.getMetaData();
+        while(rs.next()){
+            for (int i = 1; i <= rsmd.getColumnCount(); i++){
+                System.out.print(rs.getString(i) + " ");
+            }
+            System.out.println();
+        }
 	}
 
 }

@@ -182,17 +182,35 @@ public class DBManipulator {
         }
     }
 
-    public void updateRow(){
-        SQL = "delete * from " + dbTable.getTableName() + " where ? = ?";
-        try {
-            pstmt = con.prepareStatement(SQL);
-            rs = pstmt.executeQuery();
+    public String updateRow(ArrayList<String> values){
+        int result;
+        SQL ="";
+        SQL+="update " + dbTable.getTableName() + " set " ;
+        for (int i = 0; i < dbTable.getColumns().size(); i++){
+            if (i == dbTable.getColumns().size()-1){
+                SQL+=dbTable.getColumns().get(i) + " = ";
+                SQL+="'" + values.get(i) + "'  ";
+            } else {
+                SQL+=dbTable.getColumns().get(i) + " = ";
+                SQL+="'" + values.get(i) + "' , ";
+            }
+        }
+        SQL+=" where ";
+        String pkCol = dbTable.getColumns().get(dbTable.getPK());
+        System.out.println(values.toString());
+        String pkVal = values.get(dbTable.getPK());
+        SQL+=pkCol + " = '" + pkVal + "'";
 
+        try {
+            stmt = con.createStatement();
+            result = stmt.executeUpdate(SQL);
         } catch (SQLException e) {
-            System.err.println("Error in deleting row " + dbTable.getTableName());
+            System.err.println("Error in updating row  " + dbTable.getTableName());
             System.err.println("SQL: " + SQL);
             e.printStackTrace();
+            return "Error in update row " + dbTable.getTableName();
         }
+        return "query ok";
     }
 
     public DatabaseMetaData getDmd() {
