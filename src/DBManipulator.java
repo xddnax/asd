@@ -135,9 +135,9 @@ public class DBManipulator {
         sb.append(" values ( ");
         for (int i = 0; i < values.size(); i++){
             if (i == values.size()-1){
-                sb.append(values.get(i) + " ) ");
+                sb.append("'" + values.get(i) + "' ) ");
             } else {
-                sb.append(values.get(i) + " , ");
+                sb.append("'" + values.get(i) + "' , ");
             }
         }
         SQL = "" + sb.toString();

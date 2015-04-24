@@ -12,7 +12,7 @@ public class Test {
         for (int i = 0; i < as.size(); i++){
             System.out.println(as.get(i));
         }
-        qs.chooseTable("Album");
+        qs.chooseTable("Artist");
         DBTable dbt = qs.getDbTable();
         for (String s : dbt.getColumns()){
             System.out.println(s);
