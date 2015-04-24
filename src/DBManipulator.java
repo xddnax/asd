@@ -95,8 +95,8 @@ public class DBManipulator {
                 this.dbTable.addRecord(new DBRecord(columnData, "1"));
             }
 
-            rs = dmd.getPrimaryKeys(null, null, table);
-            dbTable.setPK(rs.getString(4));
+//            rs = dmd.getPrimaryKeys(null, null, table);
+//            dbTable.setPK(rs.getString(4));
 
         } catch (SQLException e) {
             System.err.println("Error in choosing table: " + table);
