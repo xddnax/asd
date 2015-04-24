@@ -145,7 +145,7 @@ public class DBManipulator {
             stmt = con.createStatement();
             result = stmt.executeUpdate(SQL);
         } catch (SQLException e) {
-            System.err.println("Error in inserting row " + dbTable.getTableName());
+            System.err.println("Error in inserting row into " + dbTable.getTableName());
             System.err.println("SQL: " + SQL);
             e.printStackTrace();
             return "Error in inserting row " + dbTable.getTableName();

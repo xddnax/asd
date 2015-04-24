@@ -22,7 +22,7 @@ public class Test {
             System.out.println(dbr);
         }
         ArrayList<String> vals = new ArrayList<String>();
-        vals.add("a");
+        vals.add("asd");
         vals.add("M");
         qs.insertRow(vals);
 
