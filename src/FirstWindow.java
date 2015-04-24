@@ -90,7 +90,7 @@ public class FirstWindow extends JFrame implements ActionListener{
     ArrayList<String> insertNamesList = new ArrayList<String>();
     ArrayList<String> insertValuesList=new ArrayList<String>();
     ArrayList<JTextField> textsList = new ArrayList<JTextField>();
-    HashMap<JButton, ArrayList<String>> buttonMap;
+    HashMap<JButton, ArrayList<String>> buttonMap=new HashMap<JButton, ArrayList<String>>();
     public FirstWindow(){
         super("Add component on DBManipulator at runtime");
         tableNames= dbm.getTables();
@@ -158,9 +158,9 @@ public class FirstWindow extends JFrame implements ActionListener{
 	        	minusButton.addActionListener(new ActionListener() {
 					
 					@Override
-					public void actionPerformed(ActionEvent e) {
-						dbm.deleteRow(buttonMap.get(this));
-						minusButton.setVisible(false);
+					public void actionPerformed(ActionEvent f) {
+						dbm.deleteRow(buttonMap.get(minusButton));
+						//minusButton.setVisible(false);
 						update();
 					}
 				});
@@ -179,6 +179,7 @@ public class FirstWindow extends JFrame implements ActionListener{
 		        	count++;
 	        	}
 	        	yPos+=50;
+	        	
 	        	buttonMap.put(minusButton, temp);
 	        	temp.clear();
 	        }
@@ -283,9 +284,9 @@ public class FirstWindow extends JFrame implements ActionListener{
 	        	minusButton.addActionListener(new ActionListener() {
 					
 					@Override
-					public void actionPerformed(ActionEvent e) {
-						dbm.deleteRow(buttonMap.get(e.getSource()));
-						minusButton.setVisible(false);
+					public void actionPerformed(ActionEvent f) {
+						dbm.deleteRow(buttonMap.get(minusButton));
+					//	minusButton.setVisible(false);
 						update();
 					}
 				});
