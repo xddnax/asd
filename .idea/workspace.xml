@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="250d246d-74d1-438c-bf26-0de7ace9f357" name="Default" comment="">
+    <list default="true" id="250d246d-74d1-438c-bf26-0de7ace9f357" name="Default" comment="asd&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBManipulator.java" afterPath="$PROJECT_DIR$/src/DBManipulator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FirstWindow.java" afterPath="$PROJECT_DIR$/src/FirstWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="asd.iws" />
@@ -66,14 +68,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DBManipulator.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DBManipulator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="17" selection-start="2805" selection-end="2805" vertical-scroll-proportion="-4.0740743" vertical-offset="1255" max-vertical-offset="2970">
+            <state line="103" column="49" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.8125" vertical-offset="1255" max-vertical-offset="2985">
               <folding>
                 <element signature="e#2094#2102#0" expanded="true" />
-                <element signature="e#6076#6077#0" expanded="true" />
-                <element signature="e#6102#6103#0" expanded="true" />
+                <element signature="e#6080#6081#0" expanded="true" />
+                <element signature="e#6106#6107#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,26 +84,26 @@
       <file leaf-file-name="FirstWindow.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FirstWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="48" selection-start="5024" selection-end="5024" vertical-scroll-proportion="0.0" vertical-offset="2128" max-vertical-offset="5535">
+            <state line="327" column="12" selection-start="10461" selection-end="10461" vertical-scroll-proportion="0.0" vertical-offset="4439" max-vertical-offset="5535">
               <folding>
                 <element signature="e#2391#2406#0" expanded="true" />
                 <element signature="e#2463#2471#0" expanded="true" />
                 <element signature="e#2527#2535#0" expanded="true" />
                 <element signature="e#2590#2602#0" expanded="true" />
                 <element signature="e#4545#4553#0" expanded="true" />
-                <element signature="e#4858#5059#0" expanded="true" />
-                <element signature="e#5052#5053#0" expanded="true" />
-                <element signature="e#5949#6348#0" expanded="true" />
-                <element signature="e#6342#6343#0" expanded="true" />
-                <element signature="e#7322#7509#0" expanded="true" />
-                <element signature="e#7503#7504#0" expanded="true" />
-                <element signature="e#8652#8660#0" expanded="true" />
-                <element signature="e#8965#9175#0" expanded="true" />
-                <element signature="e#9168#9169#0" expanded="true" />
-                <element signature="e#10065#10464#0" expanded="true" />
-                <element signature="e#10458#10459#0" expanded="true" />
-                <element signature="e#11438#11625#0" expanded="true" />
-                <element signature="e#11619#11620#0" expanded="true" />
+                <element signature="e#4858#5061#0" expanded="true" />
+                <element signature="e#5054#5055#0" expanded="true" />
+                <element signature="e#5951#6352#0" expanded="true" />
+                <element signature="e#6346#6347#0" expanded="true" />
+                <element signature="e#7326#7513#0" expanded="true" />
+                <element signature="e#7507#7508#0" expanded="true" />
+                <element signature="e#8656#8664#0" expanded="true" />
+                <element signature="e#8969#9181#0" expanded="true" />
+                <element signature="e#9174#9175#0" expanded="true" />
+                <element signature="e#10071#10472#0" expanded="true" />
+                <element signature="e#10466#10467#0" expanded="true" />
+                <element signature="e#11446#11633#0" expanded="true" />
+                <element signature="e#11627#11628#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,10 +138,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Test.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="33" selection-start="485" selection-end="485" vertical-scroll-proportion="0.40048543" vertical-offset="0" max-vertical-offset="945">
+            <state line="16" column="33" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="463" max-vertical-offset="945">
               <folding>
                 <element signature="e#754#762#0" expanded="true" />
               </folding>
@@ -170,8 +172,8 @@
         <option value="$PROJECT_DIR$/src/DBRecord.java" />
         <option value="$PROJECT_DIR$/src/DBTable.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/DBManipulator.java" />
         <option value="$PROJECT_DIR$/src/FirstWindow.java" />
+        <option value="$PROJECT_DIR$/src/DBManipulator.java" />
       </list>
     </option>
   </component>
@@ -571,6 +573,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="250d246d-74d1-438c-bf26-0de7ace9f357" name="Default" comment="" />
@@ -597,7 +616,11 @@
       <created>1429839696279</created>
       <updated>1429839696279</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="asd&#10;">
+      <created>1429839703482</created>
+      <updated>1429839703482</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -614,14 +637,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42813456" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42813456" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -658,8 +681,8 @@
         <state line="92" column="65" selection-start="2800" selection-end="2800" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="2715">
           <folding>
             <element signature="e#2094#2102#0" expanded="true" />
-            <element signature="e#6076#6077#0" expanded="true" />
-            <element signature="e#6102#6103#0" expanded="true" />
+            <element signature="e#6080#6081#0" expanded="true" />
+            <element signature="e#6106#6107#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -673,19 +696,19 @@
             <element signature="e#2527#2535#0" expanded="true" />
             <element signature="e#2590#2602#0" expanded="true" />
             <element signature="e#4545#4553#0" expanded="true" />
-            <element signature="e#4858#5059#0" expanded="true" />
-            <element signature="e#5052#5053#0" expanded="true" />
-            <element signature="e#5949#6348#0" expanded="true" />
-            <element signature="e#6342#6343#0" expanded="true" />
-            <element signature="e#7322#7509#0" expanded="true" />
-            <element signature="e#7503#7504#0" expanded="true" />
-            <element signature="e#8652#8660#0" expanded="true" />
-            <element signature="e#8965#9175#0" expanded="true" />
-            <element signature="e#9168#9169#0" expanded="true" />
-            <element signature="e#10065#10464#0" expanded="true" />
-            <element signature="e#10458#10459#0" expanded="true" />
-            <element signature="e#11438#11625#0" expanded="true" />
-            <element signature="e#11619#11620#0" expanded="true" />
+            <element signature="e#4858#5061#0" expanded="true" />
+            <element signature="e#5054#5055#0" expanded="true" />
+            <element signature="e#5951#6352#0" expanded="true" />
+            <element signature="e#6346#6347#0" expanded="true" />
+            <element signature="e#7326#7513#0" expanded="true" />
+            <element signature="e#7507#7508#0" expanded="true" />
+            <element signature="e#8656#8664#0" expanded="true" />
+            <element signature="e#8969#9181#0" expanded="true" />
+            <element signature="e#9174#9175#0" expanded="true" />
+            <element signature="e#10071#10472#0" expanded="true" />
+            <element signature="e#10466#10467#0" expanded="true" />
+            <element signature="e#11446#11633#0" expanded="true" />
+            <element signature="e#11627#11628#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -738,43 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="17" selection-start="2805" selection-end="2805" vertical-scroll-proportion="-4.0740743" vertical-offset="1255" max-vertical-offset="2970">
-          <folding>
-            <element signature="e#2094#2102#0" expanded="true" />
-            <element signature="e#6076#6077#0" expanded="true" />
-            <element signature="e#6102#6103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="48" selection-start="5024" selection-end="5024" vertical-scroll-proportion="0.0" vertical-offset="2128" max-vertical-offset="5535">
-          <folding>
-            <element signature="e#2391#2406#0" expanded="true" />
-            <element signature="e#2463#2471#0" expanded="true" />
-            <element signature="e#2527#2535#0" expanded="true" />
-            <element signature="e#2590#2602#0" expanded="true" />
-            <element signature="e#4545#4553#0" expanded="true" />
-            <element signature="e#4858#5059#0" expanded="true" />
-            <element signature="e#5052#5053#0" expanded="true" />
-            <element signature="e#5949#6348#0" expanded="true" />
-            <element signature="e#6342#6343#0" expanded="true" />
-            <element signature="e#7322#7509#0" expanded="true" />
-            <element signature="e#7503#7504#0" expanded="true" />
-            <element signature="e#8652#8660#0" expanded="true" />
-            <element signature="e#8965#9175#0" expanded="true" />
-            <element signature="e#9168#9169#0" expanded="true" />
-            <element signature="e#10065#10464#0" expanded="true" />
-            <element signature="e#10458#10459#0" expanded="true" />
-            <element signature="e#11438#11625#0" expanded="true" />
-            <element signature="e#11619#11620#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DBRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="23" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
@@ -782,11 +768,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FirstWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="327" column="12" selection-start="10461" selection-end="10461" vertical-scroll-proportion="0.0" vertical-offset="4439" max-vertical-offset="5535">
+          <folding>
+            <element signature="e#2391#2406#0" expanded="true" />
+            <element signature="e#2463#2471#0" expanded="true" />
+            <element signature="e#2527#2535#0" expanded="true" />
+            <element signature="e#2590#2602#0" expanded="true" />
+            <element signature="e#4545#4553#0" expanded="true" />
+            <element signature="e#4858#5061#0" expanded="true" />
+            <element signature="e#5054#5055#0" expanded="true" />
+            <element signature="e#5951#6352#0" expanded="true" />
+            <element signature="e#6346#6347#0" expanded="true" />
+            <element signature="e#7326#7513#0" expanded="true" />
+            <element signature="e#7507#7508#0" expanded="true" />
+            <element signature="e#8656#8664#0" expanded="true" />
+            <element signature="e#8969#9181#0" expanded="true" />
+            <element signature="e#9174#9175#0" expanded="true" />
+            <element signature="e#10071#10472#0" expanded="true" />
+            <element signature="e#10466#10467#0" expanded="true" />
+            <element signature="e#11446#11633#0" expanded="true" />
+            <element signature="e#11627#11628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="485" selection-end="485" vertical-scroll-proportion="0.40048543" vertical-offset="0" max-vertical-offset="945">
+        <state line="16" column="33" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="463" max-vertical-offset="945">
           <folding>
             <element signature="e#754#762#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="49" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.8125" vertical-offset="1255" max-vertical-offset="2985">
+          <folding>
+            <element signature="e#2094#2102#0" expanded="true" />
+            <element signature="e#6080#6081#0" expanded="true" />
+            <element signature="e#6106#6107#0" expanded="true" />
           </folding>
         </state>
       </provider>

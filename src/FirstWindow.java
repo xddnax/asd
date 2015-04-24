@@ -160,7 +160,7 @@ public class FirstWindow extends JFrame implements ActionListener{
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						dbm.deleteRow(buttonMap.get(this));
-						minusButton.setVisible(false);
+//						minusButton.setVisible(false);
 						update();
 					}
 				});
@@ -199,7 +199,7 @@ public class FirstWindow extends JFrame implements ActionListener{
 					dbm.insertRow(insertValuesList);
 				
 					update();
-					plusButton.setVisible(false);
+//					plusButton.setVisible(false);
 			
 				}
 			});
@@ -285,7 +285,7 @@ public class FirstWindow extends JFrame implements ActionListener{
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						dbm.deleteRow(buttonMap.get(e.getSource()));
-						minusButton.setVisible(false);
+//						minusButton.setVisible(false);
 						update();
 					}
 				});
@@ -324,7 +324,7 @@ public class FirstWindow extends JFrame implements ActionListener{
 					dbm.insertRow(insertValuesList);
 				
 					update();
-					plusButton.setVisible(false);
+//					plusButton.setVisible(false);
 			
 				}
 			});
