@@ -159,8 +159,8 @@ public class FirstWindow extends JFrame implements ActionListener{
 					
 					@Override
 					public void actionPerformed(ActionEvent f) {
-						dbm.deleteRow(buttonMap.get(minusButton));
-						//minusButton.setVisible(false);
+						dbm.deleteRow(buttonMap.get((JButton)f.getSource()));
+						minusButton.setVisible(false);
 						update();
 					}
 				});
@@ -181,7 +181,7 @@ public class FirstWindow extends JFrame implements ActionListener{
 	        	yPos+=50;
 	        	
 	        	buttonMap.put(minusButton, temp);
-	        	temp.clear();
+	        	//temp.clear();
 	        }
 	        xPos=0;
 	        JButton plusButton=new JButton("+");
@@ -285,8 +285,8 @@ public class FirstWindow extends JFrame implements ActionListener{
 					
 					@Override
 					public void actionPerformed(ActionEvent f) {
-						dbm.deleteRow(buttonMap.get(minusButton));
-					//	minusButton.setVisible(false);
+						dbm.deleteRow(buttonMap.get((JButton)f.getSource()));
+						minusButton.setVisible(false);
 						update();
 					}
 				});
