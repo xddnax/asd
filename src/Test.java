@@ -21,6 +21,10 @@ public class Test {
         for (DBRecord dbr : dbt.getRecords()){
             System.out.println(dbr);
         }
+        ArrayList<String> vals = new ArrayList<String>();
+        vals.add("a");
+        vals.add("M");
+        qs.insertRow(vals);
 
 	}
 

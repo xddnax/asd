@@ -8,6 +8,7 @@ public class DBManipulator {
     private Connection con;
     private DBTable dbTable;
     private PreparedStatement pstmt;
+    private Statement stmt;
     private String SQL;
     private ResultSet rs;
     private ResultSetMetaData rsmd;
@@ -120,34 +121,36 @@ public class DBManipulator {
     }
 
     public String insertRow(ArrayList<String> values){
+        int result;
         StringBuilder sb = new StringBuilder();
         sb.append("insert into " + dbTable.getTableName());
         sb.append("( ");
         for (int i = 0; i < dbTable.getColumns().size(); i++){
             if (i == dbTable.getColumns().size()-1){
-                sb.append(dbTable.getColumns().get(i) + ", ");
-            } else {
                 sb.append(dbTable.getColumns().get(i) + " ) ");
+            } else {
+                sb.append(dbTable.getColumns().get(i) + " , ");
             }
         }
         sb.append(" values ( ");
         for (int i = 0; i < values.size(); i++){
             if (i == values.size()-1){
-                sb.append(values.get(i) + ", ");
-            } else {
                 sb.append(values.get(i) + " ) ");
+            } else {
+                sb.append(values.get(i) + " , ");
             }
         }
         SQL = "" + sb.toString();
         try {
-            pstmt = con.prepareStatement(SQL);
-            rs = pstmt.executeQuery();
+            stmt = con.createStatement();
+            result = stmt.executeUpdate(SQL);
         } catch (SQLException e) {
             System.err.println("Error in inserting row " + dbTable.getTableName());
             System.err.println("SQL: " + SQL);
             e.printStackTrace();
+            return "Error in inserting row " + dbTable.getTableName();
         }
-        return "yes";
+        return "ok";
     }
 
     public void filterResults(){
