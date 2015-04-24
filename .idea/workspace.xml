@@ -70,7 +70,7 @@
       <file leaf-file-name="DBManipulator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="46" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.15625" vertical-offset="1075" max-vertical-offset="3000">
+            <state line="126" column="14" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.4375" vertical-offset="1660" max-vertical-offset="3000">
               <folding>
                 <element signature="e#2094#2102#0" expanded="true" />
                 <element signature="e#6134#6135#0" expanded="true" />
@@ -627,7 +627,11 @@
       <created>1429840512523</created>
       <updated>1429840512523</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="asd&#10;">
+      <created>1429841276590</created>
+      <updated>1429841276590</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -812,7 +816,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="46" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.15625" vertical-offset="1075" max-vertical-offset="3000">
+        <state line="126" column="14" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.4375" vertical-offset="1660" max-vertical-offset="3000">
           <folding>
             <element signature="e#2094#2102#0" expanded="true" />
             <element signature="e#6134#6135#0" expanded="true" />

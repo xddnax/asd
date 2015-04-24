@@ -124,9 +124,9 @@ public class DBManipulator {
         SQL = "delete * from " + dbTable.getTableName() + " where " + pkCol + " = '" + pkVal + "' ";
         try {
             stmt = con.createStatement();
-            System.err.println("SQL: " + SQL);
+            //System.err.println("SQL: " + SQL);
 
-            //stmt.executeUpdate(SQL);
+            stmt.executeUpdate(SQL);
 
         } catch (SQLException e) {
             System.err.println("Error in deleting row from " + dbTable.getTableName());
