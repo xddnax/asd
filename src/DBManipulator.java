@@ -138,7 +138,7 @@ public class DBManipulator {
                 sb.append(values.get(i) + " ) ");
             }
         }
-        SQL = sb.toString();
+        SQL = "" + sb.toString();
         try {
             pstmt = con.prepareStatement(SQL);
             rs = pstmt.executeQuery();
