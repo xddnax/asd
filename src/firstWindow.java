@@ -1,42 +1,43 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
 
 
-public class firstWindow extends JFrame{
-	 ArrayList<String> tableNames=new ArrayList<String>();
-	
-	public firstWindow(ArrayList<String> tableNames){
-		this.tableNames=tableNames;
-	}
-	public  JFrame getGUI(){
-		int numOfTables = tableNames.size();
-		JFrame frame = new JFrame();
-		Dimension d = new Dimension(150*numOfTables + 100,100);
-		frame.setPreferredSize(d);
-		frame.setSize(d);
-		for(int i=0;i<numOfTables;i++){
-			JButton button = new JButton(tableNames.get(i));
-			button.setBounds(50+150*i, 25, 150, 50);
-		//	button.setPreferredSize(new Dimension(150,50));
-		
-			frame.add(button);
+public class firstWindow extends JFrame implements ActionListener{
+	ArrayList<String> tableNames = new ArrayList<String>();
+	    JPanel panel;
+	    
+	    public firstWindow(){
+	        super("Add component on DBManipulator at runtime");
+	    	tableNames.add("name 1");
+	    	tableNames.add("bbt");
+	    	tableNames.add("bato");
+	    	
+	        setLayout(new BorderLayout());
+	        panel = new JPanel();
+	        panel.setLayout(new FlowLayout());
+	        add(panel, BorderLayout.CENTER);
+	        JButton button = new JButton("Get tables");
+	        add(button, BorderLayout.SOUTH);
+	        button.addActionListener(this);
+	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        setSize(500, 500);
+	        setVisible(true);
+	    }
+
+	    public void actionPerformed(ActionEvent evt) {
+	    	for(int i=0;i<tableNames.size();i++){
+	    	    panel.add(new JButton(tableNames.get(i)));
+		        panel.revalidate();
+		        validate();
+	    	}
+	    
+	    }
+	    public static void main(String[] args) {
+			firstWindow fw = new firstWindow();
 			
 		}
-		frame.setVisible(true);
-	return frame;}
-	
-	
-	public static void main(String[] args) {
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("name 1");
-		list.add("name 2");
-		list.add("name 3");
-		list.add("name 4");
-		firstWindow fw = new firstWindow(list);
-		JFrame frame = fw.getGUI();
-		
-		
-	}
 }
