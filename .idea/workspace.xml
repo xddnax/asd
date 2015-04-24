@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="250d246d-74d1-438c-bf26-0de7ace9f357" name="Default" comment="asd&#10;">
+    <list default="true" id="250d246d-74d1-438c-bf26-0de7ace9f357" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBManipulator.java" afterPath="$PROJECT_DIR$/src/DBManipulator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FirstWindow.java" afterPath="$PROJECT_DIR$/src/FirstWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="asd.iws" />
@@ -71,11 +70,11 @@
       <file leaf-file-name="DBManipulator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="49" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.8125" vertical-offset="1255" max-vertical-offset="2985">
+            <state line="118" column="45" selection-start="3510" selection-end="3510" vertical-scroll-proportion="0.203125" vertical-offset="1615" max-vertical-offset="3000">
               <folding>
                 <element signature="e#2094#2102#0" expanded="true" />
-                <element signature="e#6080#6081#0" expanded="true" />
-                <element signature="e#6106#6107#0" expanded="true" />
+                <element signature="e#6127#6128#0" expanded="true" />
+                <element signature="e#6153#6154#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -620,7 +619,11 @@
       <created>1429839703482</created>
       <updated>1429839703482</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="asd&#10;">
+      <created>1429839958748</created>
+      <updated>1429839958748</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -681,8 +684,8 @@
         <state line="92" column="65" selection-start="2800" selection-end="2800" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="2715">
           <folding>
             <element signature="e#2094#2102#0" expanded="true" />
-            <element signature="e#6080#6081#0" expanded="true" />
-            <element signature="e#6106#6107#0" expanded="true" />
+            <element signature="e#6127#6128#0" expanded="true" />
+            <element signature="e#6153#6154#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -805,11 +808,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="49" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.8125" vertical-offset="1255" max-vertical-offset="2985">
+        <state line="118" column="45" selection-start="3510" selection-end="3510" vertical-scroll-proportion="0.203125" vertical-offset="1615" max-vertical-offset="3000">
           <folding>
             <element signature="e#2094#2102#0" expanded="true" />
-            <element signature="e#6080#6081#0" expanded="true" />
-            <element signature="e#6106#6107#0" expanded="true" />
+            <element signature="e#6127#6128#0" expanded="true" />
+            <element signature="e#6153#6154#0" expanded="true" />
           </folding>
         </state>
       </provider>
