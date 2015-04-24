@@ -12,6 +12,7 @@ public class DBManipulator {
     private String SQL;
     private ResultSet rs;
     private ResultSetMetaData rsmd;
+    private DatabaseMetaData dmd;
 
 	public DBManipulator(){
 		super();
@@ -28,6 +29,7 @@ public class DBManipulator {
 			String user = "tg33";
 			String pass = "cyQaQ3x.";
 			con = DriverManager.getConnection(url, user, pass);
+            dmd = con.getMetaData();
 		} catch (Exception e) {
             System.err.println("Error in creating the connection");
             e.printStackTrace();
@@ -92,6 +94,10 @@ public class DBManipulator {
                 }
                 this.dbTable.addRecord(new DBRecord(columnData, "1"));
             }
+
+            rs = dmd.getPrimaryKeys(null, null, table);
+            dbTable.setPK(rs.getString(4));
+
         } catch (SQLException e) {
             System.err.println("Error in choosing table: " + table);
             System.err.println("SQL: " + SQL);
@@ -107,17 +113,26 @@ public class DBManipulator {
         return dbTable;
     }
     
-    public void deleteRow(){
-        SQL = "delete * from " + dbTable.getTableName() + " where ? = ?";
+    public String deleteRow(ArrayList<String> values){
+        String pkCol = dbTable.getColumns().get(dbTable.getPK());
+        String pkVal = values.get(dbTable.getPK());
+
+
+
+        SQL = "delete * from " + dbTable.getTableName() + " where " + pkCol + " = '" + pkVal + "' ";
         try {
-            pstmt = con.prepareStatement(SQL);
-            rs = pstmt.executeQuery();
+            stmt = con.createStatement();
+            System.err.println("SQL: " + SQL);
+
+            //stmt.executeUpdate(SQL);
 
         } catch (SQLException e) {
-            System.err.println("Error in deleting row " + dbTable.getTableName());
+            System.err.println("Error in deleting row from " + dbTable.getTableName());
             System.err.println("SQL: " + SQL);
             e.printStackTrace();
+            return "Error in deleting row from " + dbTable.getTableName();
         }
+        return "query ok";
     }
 
     public String insertRow(ArrayList<String> values){
@@ -148,7 +163,7 @@ public class DBManipulator {
             e.printStackTrace();
             return "Error in inserting row " + dbTable.getTableName();
         }
-        return "ok";
+        return "query ok";
     }
 
     public void filterResults(){
@@ -175,5 +190,9 @@ public class DBManipulator {
             System.err.println("SQL: " + SQL);
             e.printStackTrace();
         }
+    }
+
+    public DatabaseMetaData getDmd() {
+        return dmd;
     }
 }

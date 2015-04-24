@@ -1,4 +1,6 @@
+import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,8 +26,36 @@ public class Test {
         ArrayList<String> vals = new ArrayList<String>();
         vals.add("asd");
         vals.add("M");
-        qs.insertRow(vals);
 
+
+        DatabaseMetaData dmd = qs.getDmd();
+        ResultSet rs = dmd.getPrimaryKeys(null, null, "Artist");
+        ResultSetMetaData rsmd = rs.getMetaData();
+        while(rs.next()){
+            for (int i = 1; i <= rsmd.getColumnCount(); i++){
+                System.out.print(rs.getString(i) + " ");
+            }
+            System.out.println();
+        }
+
+        rs = dmd.getPrimaryKeys(null, null, "Album");
+        rsmd = rs.getMetaData();
+        while(rs.next()){
+            for (int i = 1; i <= rsmd.getColumnCount(); i++){
+                System.out.print(rs.getString(i) + " ");
+            }
+            System.out.println();
+        }
+
+
+        rs = dmd.getPrimaryKeys(null, null, "Record");
+        rsmd = rs.getMetaData();
+        while(rs.next()){
+            for (int i = 1; i <= rsmd.getColumnCount(); i++){
+                System.out.print(rs.getString(i) + " ");
+            }
+            System.out.println();
+        }
 	}
 
 }
