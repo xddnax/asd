@@ -116,6 +116,7 @@ public class DBManipulator {
     
     public String deleteRow(ArrayList<String> values){
         String pkCol = dbTable.getColumns().get(dbTable.getPK());
+        System.out.println(values.toString());
         String pkVal = values.get(dbTable.getPK());
 
 
