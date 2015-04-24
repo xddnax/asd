@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.swing.*;
+
+import com.sun.org.apache.xpath.internal.operations.Minus;
 class ConsoleX extends OutputStream {
 
     /**
@@ -84,6 +86,11 @@ public class FirstWindow extends JFrame implements ActionListener{
     JPanel panel2;
    
     HashMap<String, String> names = new HashMap<String,String>();
+    HashMap<String, String> insertQuery = new HashMap<String,String>();
+    ArrayList<String> insertNamesList = new ArrayList<String>();
+    ArrayList<String> insertValuesList=new ArrayList<String>();
+    ArrayList<JTextField> textsList = new ArrayList<JTextField>();
+    HashMap<JButton, ArrayList<String>> buttonMap;
     public FirstWindow(){
         super("Add component on DBManipulator at runtime");
         tableNames= dbm.getTables();
@@ -125,10 +132,10 @@ public class FirstWindow extends JFrame implements ActionListener{
 		Insets insets = panel2.getInsets();
 	        dbm.chooseTable(e.getActionCommand());
 	        int xPos =100;
-	        int yPos =0;
+	        int yPos =50;
 	        for(String c : dbm.getDbTable().getColumns()){
 	        	 JLabel label = new JLabel(c);
-	        	 
+	        	 insertNamesList.add(c);
 	        	 Dimension size = label.getPreferredSize();
 	        	 label.setBounds(insets.left+xPos, insets.top+5, size.width, size.height);
 	        	
@@ -138,36 +145,209 @@ public class FirstWindow extends JFrame implements ActionListener{
 	        xPos=100;
 	        yPos+= 50;
 //	        }
+	        int count=0;
 	        
 	        for(DBRecord r : dbm.getDbTable().getRecords()){
+	        	ArrayList<String> temp = new ArrayList<String>();
 	        	xPos=100;
+	        	count=0;
 	        	JButton minusButton=new JButton("-");
 	        	Dimension buttSize = minusButton.getPreferredSize();
 	        	minusButton.setBounds(15, yPos, buttSize.width, buttSize.height);
 	        	panel2.add(minusButton);
+	        	minusButton.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						dbm.deleteRow(buttonMap.get(this));
+						minusButton.setVisible(false);
+						update();
+					}
+				});
 	        	for(String s : r.getColumnValues()){
 	        		JTextArea label = new JTextArea(s);
 	        		label.setBackground(Color.WHITE);
 	        		Dimension size = label.getPreferredSize();
-	        		
+	        		temp.add(s);
 	        		label.setBounds(insets.left + xPos, insets.top+yPos, size.width, size.height);
 	        		label.setVisible(true);
 	        		xPos+=150;
-	        		System.out.println(s);
+	        		//System.out.println(s);
 		        	panel2.add(label);
 		        	panel2.revalidate();
 		        	validate();
+		        	count++;
 	        	}
 	        	yPos+=50;
+	        	buttonMap.put(minusButton, temp);
+	        	temp.clear();
 	        }
+	        xPos=0;
 	        JButton plusButton=new JButton("+");
         	Dimension buttSize = plusButton.getPreferredSize();
-        	plusButton.setBounds(15, yPos, buttSize.width, buttSize.height);
+        	plusButton.setBounds(xPos, yPos, buttSize.width, buttSize.height);
         	panel2.add(plusButton);
-        	JTextField jtf = new JTextField("write desired input");
-         	Dimension textSize = jtf.getPreferredSize();
-        	jtf.setBounds(150, yPos, textSize.width, textSize.height);
-        	panel2.add(jtf);
+        	plusButton.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					insertValuesList.clear();
+					for(int i=0;i<textsList.size();i++){
+					insertValuesList.add(textsList.get(i).getText());	
+					//	System.out.println(textsList.get(i).getText() + "    ");
+					}
+					dbm.insertRow(insertValuesList);
+				
+					update();
+					plusButton.setVisible(false);
+			
+				}
+			});
+        	xPos+=50;
+        	for(int i=0;i<count;i++){
+        		JTextField jtf = new JTextField("input Here");
+             	Dimension textSize = jtf.getPreferredSize();
+            	jtf.setBounds(xPos, yPos, textSize.width, textSize.height);
+            	panel2.add(jtf);
+            	textsList.add(jtf);
+            	xPos+=150;
+            	
+        	}
+     		xPos=75;
+        	for(int i=0;i<count;i++){
+       
+        		JTextField jtf = new JTextField("input Filter");
+             	Dimension textSize = jtf.getPreferredSize();
+            	jtf.setBounds(xPos, 50, textSize.width, textSize.height);
+            	panel2.add(jtf);
+            	xPos+=150;
+        	}
+        	
+        	JButton backButton = new JButton("go back");
+        	Dimension bbSize = backButton.getPreferredSize();
+        	backButton.setBounds(0, 0, bbSize.width, bbSize.height);
+        	//backButton.addActionListener();
+        	panel2.add(backButton);
+        	backButton.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					panel2.setVisible(false);
+					panel.setVisible(true);
+					panel2=new JPanel();
+				}
+			});
+	        validate();
+	}
+	
+	private void update(){
+		//System.out.println(e.getActionCommand());
+//		JTextArea ta = new JTextArea();
+//		panel2.add(ta);
+		 tableNames= dbm.getTables();
+	       panel2.removeAll();
+		
+		panel.setVisible(false);
+		panel2.setVisible(true);
+		panel2.setLayout(null);
+		//panel2.setBackground(Color.WHITE);
+		add(panel2);
+		panel2.add(new JScrollPane());
+//		 System.setOut(new PrintStream(new ConsoleX(ta)));
+//	        ta.setLineWrap(false);
+		Insets insets = panel2.getInsets();
+	        dbm.chooseTable(dbm.getDbTable().getTableName());
+	        int xPos =100;
+	        int yPos =50;
+	        for(String c : dbm.getDbTable().getColumns()){
+	        	 JLabel label = new JLabel(c);
+	        	 insertNamesList.add(c);
+	        	 Dimension size = label.getPreferredSize();
+	        	 label.setBounds(insets.left+xPos, insets.top+5, size.width, size.height);
+	        	
+	        	 xPos+=150;
+	        	 panel2.add(label);
+	        }
+	        xPos=100;
+	        yPos+= 50;
+//	        }
+	        int count=0;
+	        for(DBRecord r : dbm.getDbTable().getRecords()){
+	        	ArrayList<String> temp = new ArrayList<String>();
+	        	xPos=100;
+	        	count=0;
+	        	JButton minusButton=new JButton("-");
+	        	Dimension buttSize = minusButton.getPreferredSize();
+	        	minusButton.setBounds(15, yPos, buttSize.width, buttSize.height);
+	        	panel2.add(minusButton);
+	        	minusButton.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						dbm.deleteRow(buttonMap.get(e.getSource()));
+						minusButton.setVisible(false);
+						update();
+					}
+				});
+	        	for(String s : r.getColumnValues()){
+	        		JTextArea label = new JTextArea(s);
+	        		label.setBackground(Color.WHITE);
+	        		Dimension size = label.getPreferredSize();
+	        		temp.add(s);
+	        		label.setBounds(insets.left + xPos, insets.top+yPos, size.width, size.height);
+	        		label.setVisible(true);
+	        		xPos+=150;
+	        		//System.out.println(s);
+		        	panel2.add(label);
+		        	panel2.revalidate();
+		        	validate();
+		        	count++;
+	        	}
+	        	yPos+=50;
+	        	buttonMap.put(minusButton, temp);
+	        	temp.clear();
+	        }
+	        xPos=0;
+	        JButton plusButton=new JButton("+");
+        	Dimension buttSize = plusButton.getPreferredSize();
+        	plusButton.setBounds(xPos, yPos, buttSize.width, buttSize.height);
+        	panel2.add(plusButton);
+        	plusButton.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					insertValuesList.clear();
+					for(int i=0;i<textsList.size();i++){
+					insertValuesList.add(textsList.get(i).getText());	
+					//	System.out.println(textsList.get(i).getText() + "    ");
+					}
+					dbm.insertRow(insertValuesList);
+				
+					update();
+					plusButton.setVisible(false);
+			
+				}
+			});
+        	xPos+=50;
+        	for(int i=0;i<count;i++){
+        		JTextField jtf = new JTextField("input Here");
+             	Dimension textSize = jtf.getPreferredSize();
+            	jtf.setBounds(xPos, yPos, textSize.width, textSize.height);
+            	panel2.add(jtf);
+            	textsList.add(jtf);
+            	xPos+=150;
+            	
+        	}
+     		xPos=75;
+        	for(int i=0;i<count;i++){
+       
+        		JTextField jtf = new JTextField("input Filter");
+             	Dimension textSize = jtf.getPreferredSize();
+            	jtf.setBounds(xPos, 50, textSize.width, textSize.height);
+            	panel2.add(jtf);
+            	xPos+=150;
+        	}
+        	
         	JButton backButton = new JButton("go back");
         	Dimension bbSize = backButton.getPreferredSize();
         	backButton.setBounds(0, 0, bbSize.width, bbSize.height);
@@ -185,9 +365,6 @@ public class FirstWindow extends JFrame implements ActionListener{
 	        validate();
 	}
 
-    public void selectedTable(ActionEvent evt){
-    	
-    }
     
     public static void main(String[] args) {
         FirstWindow fw = new FirstWindow();
