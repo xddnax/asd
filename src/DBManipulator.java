@@ -75,7 +75,7 @@ public class DBManipulator {
         ArrayList<String> columnNames = new ArrayList<String>();
         ArrayList<String> columnData;
 
-        SQL = "Select * from " + table;
+        SQL = "Select * from `" + table + "`";
         try {
             pstmt = con.prepareStatement(SQL);
             rs = pstmt.executeQuery();
