@@ -1,84 +1,19 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.swing.*;
 
-import com.sun.org.apache.xpath.internal.operations.Minus;
-
-class ConsoleX extends OutputStream {
-
-    /**
-     * Represents the data written to the stream.
-     */
-    ArrayList<Byte> data = new ArrayList<Byte>();
-
-    /**
-     * Represents the text area that will be showing the written data.
-     */
-    private JTextArea output;
-
-    /**
-     * Creates a console context.
-     *
-     * @param output The text area to output the consoles text.
-     */
-    public ConsoleX(JTextArea output) {
-        this.output = output;
-    }
-
-    /**
-     * Called when data has been written to the console.
-     */
-    private void fireDataWritten() {
-
-        // First we loop through our written data counting the lines.
-        int lines = 0;
-        for (int i = 0; i < data.size(); i++) {
-            byte b = data.get(i);
-
-            // Specifically we look for 10 which represents "\n".
-            if (b == 10) {
-                lines++;
-            }
-
-            // If the line count exceeds 250 we remove older lines.
-            if (lines >= 250) {
-                data = (ArrayList<Byte>) data.subList(i, data.size());
-            }
-        }
-
-        // We then create a string builder to append our text data.
-        StringBuilder bldr = new StringBuilder();
-
-        // We loop through the text data appending it to the string builder.
-        for (byte b : data) {
-            bldr.append((char) b);
-        }
-
-        // Finally we set the outputs text to our built string.
-        output.setText(bldr.toString());
-    }
-
-    @Override
-    public void write(int i) throws IOException {
-
-        // Append the piece of data to our array of data.
-        data.add((byte) i);
-
-        // Indicate that data has just been written.
-        fireDataWritten();
-    }
-
-}
 
 public class FirstWindow extends JFrame implements ActionListener {
-    private DBManipulator dbm = new DBManipulator();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private DBManipulator dbm = new DBManipulator();
 
     ArrayList<String> tableNames = new ArrayList<String>();
 
@@ -93,22 +28,24 @@ public class FirstWindow extends JFrame implements ActionListener {
     HashMap<JButton, ArrayList<String>> buttonMap = new HashMap<JButton, ArrayList<String>>();
 
     public FirstWindow() {
-        super("Add component on DBManipulator at runtime");
+        super("DBManipulator");
         tableNames = dbm.getTables();
-        setLayout(new BorderLayout());
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1000, 1000);
-        setVisible(true);
-        createPanel1();
-        createPanel2();
-
+        this.setLayout(new FlowLayout());
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(1000, 1000);
+        this.setVisible(true);
+        this.createPanel1();
+        
     }
 
     private void createPanel1() {
+    	
         panel = new JPanel();
-        panel.setLayout(new FlowLayout());
-        add(panel, BorderLayout.CENTER);
-
+        panel.setPreferredSize(new Dimension(1000, 1000));
+        panel.setBackground(Color.RED);
+        panel.setVisible(true);
+        add(panel);
+        
         for (int i = 0; i < tableNames.size(); i++) {
             JButton button = new JButton(tableNames.get(i));
             names.put(button.getName(), tableNames.get(i));
@@ -117,17 +54,20 @@ public class FirstWindow extends JFrame implements ActionListener {
             panel.revalidate();
             validate();
         }
-        panel.setVisible(true);
+       
     }
 
     private void createPanel2() {
-        panel2 = new JPanel();
+    	panel2 = new JPanel();
+        panel2.setPreferredSize(new Dimension(1000, 1000));
+        panel2.setBackground(Color.MAGENTA);
+        panel2.setVisible(true);
         add(panel2);
     }
 
     private void initPanel2(String table){
         panel.setVisible(false);
-        panel.removeAll();
+      //  panel.removeAll();
         panel2.setVisible(true);
         panel2.setLayout(null);
         Insets insets = panel2.getInsets();
@@ -140,7 +80,7 @@ public class FirstWindow extends JFrame implements ActionListener {
             Dimension size = label.getPreferredSize();
             label.setBounds(insets.left + xPos, insets.top + 5, size.width, size.height);
 
-            xPos += 150;
+            xPos += 200;
             panel2.add(label);
         }
         xPos = 100;
@@ -161,7 +101,10 @@ public class FirstWindow extends JFrame implements ActionListener {
                 public void actionPerformed(ActionEvent f) {
                     dbm.deleteRow(buttonMap.get((JButton) f.getSource()));
 //						minusButton.setVisible(false);
-                    initPanel2(dbm.getDbTable().getTableName());
+               //     createPanel1();
+                    dbm.chooseTable(table);
+                    initPanel2(table);
+                    
                 }
             });
             for (String s : r.getColumnValues()) {
@@ -171,8 +114,17 @@ public class FirstWindow extends JFrame implements ActionListener {
                 temp.add(s);
                 label.setBounds(insets.left + xPos, insets.top + yPos, size.width, size.height);
                 label.setVisible(true);
+                
                 xPos += 150;
+                
+                JButton updateBut = new JButton("U");
+                Dimension si = updateBut.getPreferredSize();
+                updateBut.setBounds(insets.left+xPos, insets.top+yPos, si.width, si.height);
+                updateBut.setVisible(true);
+                xPos+=50;
                 panel2.add(label);
+                panel2.add(updateBut);
+                
                 panel2.revalidate();
                 validate();
                 count++;
@@ -207,7 +159,7 @@ public class FirstWindow extends JFrame implements ActionListener {
             jtf.setBounds(xPos, yPos, textSize.width, textSize.height);
             panel2.add(jtf);
             textsList.add(jtf);
-            xPos += 150;
+            xPos += 200;
 
         }
         xPos = 75;
@@ -237,7 +189,9 @@ public class FirstWindow extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        initPanel2(e.getActionCommand());
+    	
+    	createPanel2();
+    	initPanel2(e.getActionCommand());
     }
 
 
