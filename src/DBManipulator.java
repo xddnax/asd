@@ -97,6 +97,7 @@ public class DBManipulator {
             }
 
             rs = dmd.getPrimaryKeys(null, null, table);
+            rs.next();
             dbTable.setPK(rs.getString(4));
 
         } catch (SQLException e) {
@@ -121,7 +122,7 @@ public class DBManipulator {
 
 
 
-        SQL = "delete * from " + dbTable.getTableName() + " where " + pkCol + " = '" + pkVal + "' ";
+        SQL = "delete from `" + dbTable.getTableName() + "` where " + pkCol + " = '" + pkVal + "' ";
         try {
             stmt = con.createStatement();
             //System.err.println("SQL: " + SQL);

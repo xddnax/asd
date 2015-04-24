@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="250d246d-74d1-438c-bf26-0de7ace9f357" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBManipulator.java" afterPath="$PROJECT_DIR$/src/DBManipulator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FirstWindow.java" afterPath="$PROJECT_DIR$/src/FirstWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="asd.iws" />
@@ -58,6 +59,38 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/DBManipulator.java" line="74" class="DBManipulator" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/DBManipulator.java" line="98" class="DBManipulator" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -70,11 +103,12 @@
       <file leaf-file-name="DBManipulator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="14" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.4375" vertical-offset="1660" max-vertical-offset="3000">
+            <state line="124" column="79" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.421875" vertical-offset="1665" max-vertical-offset="3045">
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#2094#2102#0" expanded="true" />
-                <element signature="e#6134#6135#0" expanded="true" />
-                <element signature="e#6160#6161#0" expanded="true" />
+                <element signature="e#6157#6158#0" expanded="true" />
+                <element signature="e#6183#6184#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,26 +117,24 @@
       <file leaf-file-name="FirstWindow.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FirstWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="12" selection-start="10461" selection-end="10461" vertical-scroll-proportion="0.0" vertical-offset="4439" max-vertical-offset="5535">
+            <state line="112" column="60" selection-start="3278" selection-end="3278" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="3795">
               <folding>
-                <element signature="e#2391#2406#0" expanded="true" />
-                <element signature="e#2463#2471#0" expanded="true" />
-                <element signature="e#2527#2535#0" expanded="true" />
-                <element signature="e#2590#2602#0" expanded="true" />
-                <element signature="e#4545#4553#0" expanded="true" />
-                <element signature="e#4858#5061#0" expanded="true" />
-                <element signature="e#5054#5055#0" expanded="true" />
-                <element signature="e#5951#6352#0" expanded="true" />
-                <element signature="e#6346#6347#0" expanded="true" />
-                <element signature="e#7326#7513#0" expanded="true" />
-                <element signature="e#7507#7508#0" expanded="true" />
-                <element signature="e#8656#8664#0" expanded="true" />
-                <element signature="e#8969#9181#0" expanded="true" />
-                <element signature="e#9174#9175#0" expanded="true" />
-                <element signature="e#10071#10472#0" expanded="true" />
-                <element signature="e#10466#10467#0" expanded="true" />
-                <element signature="e#11446#11633#0" expanded="true" />
-                <element signature="e#11627#11628#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#460#466#0" expanded="true" />
+                <element signature="e#2199#2207#0" expanded="true" />
+                <element signature="e#2297#2313#0" expanded="true" />
+                <element signature="e#2370#2386#0" expanded="true" />
+                <element signature="e#2443#2451#0" expanded="true" />
+                <element signature="e#2509#2517#0" expanded="true" />
+                <element signature="e#2572#2584#0" expanded="true" />
+                <element signature="e#2651#2679#0" expanded="true" />
+                <element signature="e#4423#4431#0" expanded="true" />
+                <element signature="e#4756#5077#0" expanded="true" />
+                <element signature="e#5062#5063#0" expanded="true" />
+                <element signature="e#6004#6511#0" expanded="true" />
+                <element signature="e#6500#6501#0" expanded="true" />
+                <element signature="e#7463#7709#0" expanded="true" />
+                <element signature="e#7698#7699#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -374,7 +406,7 @@
       </UpdatedFiles>
     </UpdateInfo>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager" selected="Application.FirstWindow">
     <configuration default="false" name="FirstWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FirstWindow" />
       <option name="VM_PARAMETERS" />
@@ -387,7 +419,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Databases" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -631,7 +669,11 @@
       <created>1429841276590</created>
       <updated>1429841276590</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="asd&#10;">
+      <created>1429841677791</created>
+      <updated>1429841677791</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -691,9 +733,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="65" selection-start="2800" selection-end="2800" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="2715">
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#2094#2102#0" expanded="true" />
-            <element signature="e#6134#6135#0" expanded="true" />
-            <element signature="e#6160#6161#0" expanded="true" />
+            <element signature="e#6157#6158#0" expanded="true" />
+            <element signature="e#6183#6184#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -702,24 +745,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="44" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="3045">
           <folding>
-            <element signature="e#2391#2406#0" expanded="true" />
-            <element signature="e#2463#2471#0" expanded="true" />
-            <element signature="e#2527#2535#0" expanded="true" />
-            <element signature="e#2590#2602#0" expanded="true" />
-            <element signature="e#4545#4553#0" expanded="true" />
-            <element signature="e#4858#5061#0" expanded="true" />
-            <element signature="e#5054#5055#0" expanded="true" />
-            <element signature="e#5951#6352#0" expanded="true" />
-            <element signature="e#6346#6347#0" expanded="true" />
-            <element signature="e#7326#7513#0" expanded="true" />
-            <element signature="e#7507#7508#0" expanded="true" />
-            <element signature="e#8656#8664#0" expanded="true" />
-            <element signature="e#8969#9181#0" expanded="true" />
-            <element signature="e#9174#9175#0" expanded="true" />
-            <element signature="e#10071#10472#0" expanded="true" />
-            <element signature="e#10466#10467#0" expanded="true" />
-            <element signature="e#11446#11633#0" expanded="true" />
-            <element signature="e#11627#11628#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#460#466#0" expanded="true" />
+            <element signature="e#2199#2207#0" expanded="true" />
+            <element signature="e#2297#2313#0" expanded="true" />
+            <element signature="e#2370#2386#0" expanded="true" />
+            <element signature="e#2443#2451#0" expanded="true" />
+            <element signature="e#2509#2517#0" expanded="true" />
+            <element signature="e#2572#2584#0" expanded="true" />
+            <element signature="e#2651#2679#0" expanded="true" />
+            <element signature="e#4423#4431#0" expanded="true" />
+            <element signature="e#4756#5077#0" expanded="true" />
+            <element signature="e#5062#5063#0" expanded="true" />
+            <element signature="e#6004#6511#0" expanded="true" />
+            <element signature="e#6500#6501#0" expanded="true" />
+            <element signature="e#7463#7709#0" expanded="true" />
+            <element signature="e#7698#7699#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -781,26 +822,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FirstWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="12" selection-start="10461" selection-end="10461" vertical-scroll-proportion="0.0" vertical-offset="4439" max-vertical-offset="5535">
+        <state line="112" column="60" selection-start="3278" selection-end="3278" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="3795">
           <folding>
-            <element signature="e#2391#2406#0" expanded="true" />
-            <element signature="e#2463#2471#0" expanded="true" />
-            <element signature="e#2527#2535#0" expanded="true" />
-            <element signature="e#2590#2602#0" expanded="true" />
-            <element signature="e#4545#4553#0" expanded="true" />
-            <element signature="e#4858#5061#0" expanded="true" />
-            <element signature="e#5054#5055#0" expanded="true" />
-            <element signature="e#5951#6352#0" expanded="true" />
-            <element signature="e#6346#6347#0" expanded="true" />
-            <element signature="e#7326#7513#0" expanded="true" />
-            <element signature="e#7507#7508#0" expanded="true" />
-            <element signature="e#8656#8664#0" expanded="true" />
-            <element signature="e#8969#9181#0" expanded="true" />
-            <element signature="e#9174#9175#0" expanded="true" />
-            <element signature="e#10071#10472#0" expanded="true" />
-            <element signature="e#10466#10467#0" expanded="true" />
-            <element signature="e#11446#11633#0" expanded="true" />
-            <element signature="e#11627#11628#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#460#466#0" expanded="true" />
+            <element signature="e#2199#2207#0" expanded="true" />
+            <element signature="e#2297#2313#0" expanded="true" />
+            <element signature="e#2370#2386#0" expanded="true" />
+            <element signature="e#2443#2451#0" expanded="true" />
+            <element signature="e#2509#2517#0" expanded="true" />
+            <element signature="e#2572#2584#0" expanded="true" />
+            <element signature="e#2651#2679#0" expanded="true" />
+            <element signature="e#4423#4431#0" expanded="true" />
+            <element signature="e#4756#5077#0" expanded="true" />
+            <element signature="e#5062#5063#0" expanded="true" />
+            <element signature="e#6004#6511#0" expanded="true" />
+            <element signature="e#6500#6501#0" expanded="true" />
+            <element signature="e#7463#7709#0" expanded="true" />
+            <element signature="e#7698#7699#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -816,11 +855,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="14" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.4375" vertical-offset="1660" max-vertical-offset="3000">
+        <state line="124" column="79" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.421875" vertical-offset="1665" max-vertical-offset="3045">
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#2094#2102#0" expanded="true" />
-            <element signature="e#6134#6135#0" expanded="true" />
-            <element signature="e#6160#6161#0" expanded="true" />
+            <element signature="e#6157#6158#0" expanded="true" />
+            <element signature="e#6183#6184#0" expanded="true" />
           </folding>
         </state>
       </provider>
