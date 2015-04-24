@@ -60,7 +60,7 @@ public class FirstWindow extends JFrame implements ActionListener {
     private void createPanel2() {
     	panel2 = new JPanel();
         panel2.setPreferredSize(new Dimension(1000, 1000));
-        panel2.setBackground(Color.MAGENTA);
+        panel2.setBackground(Color.RED);
         panel2.setVisible(true);
         add(panel2);
     }
@@ -86,8 +86,9 @@ public class FirstWindow extends JFrame implements ActionListener {
         xPos = 100;
         yPos += 50;
         int count = 0;
-
+    	int unChangeable = dbm.getDbTable().getPK();
         for (DBRecord r : dbm.getDbTable().getRecords()) {
+
             ArrayList<String> temp = new ArrayList<String>();
             xPos = 100;
             count = 0;
@@ -108,6 +109,20 @@ public class FirstWindow extends JFrame implements ActionListener {
                 }
             });
             for (String s : r.getColumnValues()) {
+            	if(count == unChangeable){
+            		 JLabel label = new JLabel(s);
+                     label.setBackground(Color.WHITE);
+                     Dimension size = label.getPreferredSize();
+                     temp.add(s);
+                     label.setBounds(insets.left + xPos, insets.top + yPos, size.width, size.height);
+                     label.setVisible(true);
+                     
+                     xPos += 150;
+                     
+                     
+                     panel2.add(label);
+            	}
+            	else{
                 JTextArea label = new JTextArea(s);
                 label.setBackground(Color.WHITE);
                 Dimension size = label.getPreferredSize();
@@ -117,18 +132,20 @@ public class FirstWindow extends JFrame implements ActionListener {
                 
                 xPos += 150;
                 
-                JButton updateBut = new JButton("U");
-                Dimension si = updateBut.getPreferredSize();
-                updateBut.setBounds(insets.left+xPos, insets.top+yPos, si.width, si.height);
-                updateBut.setVisible(true);
-                xPos+=50;
+                
                 panel2.add(label);
-                panel2.add(updateBut);
+            	}
                 
                 panel2.revalidate();
                 validate();
                 count++;
             }
+            JButton updateBut = new JButton("U");
+            Dimension si = updateBut.getPreferredSize();
+            updateBut.setBounds(insets.left+xPos, insets.top+yPos, si.width, si.height);
+            updateBut.setVisible(true);
+            xPos+=50;
+            panel2.add(updateBut);
             yPos += 50;
 
             buttonMap.put(minusButton, temp);
