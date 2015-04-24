@@ -122,25 +122,23 @@ public class DBManipulator {
 
     public String insertRow(ArrayList<String> values){
         int result;
-        StringBuilder sb = new StringBuilder();
-        sb.append("insert into " + dbTable.getTableName());
-        sb.append("( ");
+        SQL ="";
+        SQL+="insert into " + dbTable.getTableName() + " ( ";
         for (int i = 0; i < dbTable.getColumns().size(); i++){
             if (i == dbTable.getColumns().size()-1){
-                sb.append(dbTable.getColumns().get(i) + " ) ");
+                SQL+=dbTable.getColumns().get(i) + " ) ";
             } else {
-                sb.append(dbTable.getColumns().get(i) + " , ");
+                SQL+=dbTable.getColumns().get(i) + " , ";
             }
         }
-        sb.append(" values ( ");
+        SQL+=" values ( ";
         for (int i = 0; i < values.size(); i++){
             if (i == values.size()-1){
-                sb.append("'" + values.get(i) + "' ) ");
+                SQL+="'" + values.get(i) + "' ) ";
             } else {
-                sb.append("'" + values.get(i) + "' , ");
+                SQL+="'" + values.get(i) + "' , ";
             }
         }
-        SQL = "" + sb.toString();
         try {
             stmt = con.createStatement();
             result = stmt.executeUpdate(SQL);

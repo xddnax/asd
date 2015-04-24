@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="250d246d-74d1-438c-bf26-0de7ace9f357" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBManipulator.java" afterPath="$PROJECT_DIR$/src/DBManipulator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test.java" afterPath="$PROJECT_DIR$/src/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="asd.iws" />
@@ -71,7 +70,7 @@
       <file leaf-file-name="DBManipulator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="45" selection-start="4494" selection-end="4494" vertical-scroll-proportion="0.6051873" vertical-offset="1875" max-vertical-offset="2715">
+            <state line="136" column="45" selection-start="4173" selection-end="4173" vertical-scroll-proportion="0.64841497" vertical-offset="1725" max-vertical-offset="2685">
               <folding>
                 <element signature="e#2023#2031#0" expanded="true" />
               </folding>
@@ -118,7 +117,7 @@
       <file leaf-file-name="Test.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="21" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="510">
+            <state line="24" column="24" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -146,8 +145,8 @@
         <option value="$PROJECT_DIR$/src/TableGUI.java" />
         <option value="$PROJECT_DIR$/src/DBRecord.java" />
         <option value="$PROJECT_DIR$/src/DBTable.java" />
-        <option value="$PROJECT_DIR$/src/DBManipulator.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
+        <option value="$PROJECT_DIR$/src/DBManipulator.java" />
       </list>
     </option>
   </component>
@@ -409,6 +408,11 @@
       <created>1429811868113</created>
       <updated>1429811868113</updated>
     </task>
+    <task id="LOCAL-00001" summary="asd">
+      <created>1429834705862</created>
+      <updated>1429834705862</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -432,7 +436,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42813456" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42813456" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -452,6 +456,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="asd" />
+    <option name="LAST_COMMIT_MESSAGE" value="asd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -535,14 +541,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="21" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="510">
+        <state line="24" column="24" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DBManipulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="45" selection-start="4494" selection-end="4494" vertical-scroll-proportion="0.6051873" vertical-offset="1875" max-vertical-offset="2715">
+        <state line="136" column="45" selection-start="4173" selection-end="4173" vertical-scroll-proportion="0.64841497" vertical-offset="1725" max-vertical-offset="2685">
           <folding>
             <element signature="e#2023#2031#0" expanded="true" />
           </folding>
